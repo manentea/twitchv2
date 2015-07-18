@@ -2,13 +2,28 @@
 <html>
 <head>
   <title>Twitch</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="video">
+    <h3 class='name'>
+      <u>Display Name</u>
+    </h3>
+    <textarea class='display' placeholder='Enter Your Display Name!'></textarea>
+    <iframe src="http://www.twitch.tv/summit1g/embed" frameborder="0" scrolling="no" height="450" width="1150"></iframe>
+  </div>
+  <div class="chat-container">
 
-<%= yield %>
+    <div class="chat">
+
+    </div>
+    <textarea class="chat-box" placeholder='Enter Your Message Here!'>
+
+    </textarea>
+  </div>
 
 </body>
 </html>
