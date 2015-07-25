@@ -2,8 +2,8 @@
   <div class="log">
     <span class='log-button'>Login/Signup</span>
     <div class="name">
-      <form action='/users' method='post'>
-        <div><input type='text' name='user[username]' placeholder='Username'/></div>
+      <form class='log-form' action='/users' method='post'>
+        <div><input type='text' name='user[name]' placeholder='Username'/></div>
         <div><input type='password' name='user[password]' placeholder='Password'/></div>
         <div><input type='submit' value='Login/Signup'></div>
       </form>
@@ -16,7 +16,8 @@
   <div class="chat">
 
   </div>
-  <textarea class="chat-box" placeholder='Enter Your Message Here!'>
-
-  </textarea>
+  <form class='message' action='/messages' method='post'>
+    <input class="chat-box" type='text' name='message[content]' placeholder='Your Message Here!'></input>
+    <input type='submit' value='Submit'/>
+  </form>
 </div>
