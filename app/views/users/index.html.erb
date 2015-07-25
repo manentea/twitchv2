@@ -1,9 +1,15 @@
 <div class="video">
-  <h3 class='name'>
-    <u>Display Name</u>
-  </h3>
-  <textarea class='display' placeholder='Enter Your Display Name!'></textarea>
-  <iframe src="http://www.twitch.tv/summit1g/embed" frameborder="0" scrolling="no" height="450" width="1150"></iframe>
+  <div class="log">
+    <span class='log-button'>Login/Signup</span>
+    <div class="name">
+      <form action='/users' method='post'>
+        <div><input type='text' name='user[username]' placeholder='Username'/></div>
+        <div><input type='password' name='user[password]' placeholder='Password'/></div>
+        <div><input type='submit' value='Login/Signup'></div>
+      </form>
+    </div>
+  </div>
+  <iframe src="http://tv.majorleaguegaming.com/player/embed/playcevo" frameborder="0" scrolling="no" height="450" width="1150"></iframe>
 </div>
 <div class="chat-container">
 

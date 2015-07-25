@@ -23,7 +23,7 @@ body {
   background-color: white;
   z-index: 10000;
   overflow: scroll;
-  height: 10%;
+  height: 5em;
 }
 
 .chat-box {
@@ -37,4 +37,9 @@ body {
 .name {
   color: white;
   margin-bottom: 0;
+}
+
+.log-button{
+  color: white;
+  padding-left: .5em;
 }
