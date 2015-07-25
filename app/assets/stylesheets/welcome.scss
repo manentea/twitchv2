@@ -43,3 +43,13 @@ body {
   color: white;
   padding-left: .5em;
 }
+
+.flash-error {
+  @include flash(white);
+  position: absolute;
+  z-index: 200000;
+  width: 50%;
+  margin: auto;
+  margin-left: 20em;
+  margin-top: 15em;
+}
