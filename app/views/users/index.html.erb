@@ -1,23 +1,33 @@
-<div class="video">
-  <div class="log">
-    <span class='log-button'>Login/Signup</span>
-    <div class="name">
-      <form class='log-form' action='/users' method='post'>
-        <div><input type='text' name='user[name]' placeholder='Username'/></div>
-        <div><input type='password' name='user[password]' placeholder='Password'/></div>
-        <div><input type='submit' value='Login/Signup'></div>
-      </form>
+<div class="container">
+  <div class="title">
+    <h4>People Online</h4>
+    <div class='online'>
+      <% @users.each do |user| %>
+        <%= user.name %>
+      <%end%>
     </div>
   </div>
-  <iframe src="https://tv.majorleaguegaming.com/player/embed/playcevo" frameborder="0" scrolling="no" height="450" width="1150"></iframe>
-</div>
-<div class="chat-container">
-
-  <div class="chat">
-
+  <div class="video">
+    <div class="log">
+      <span class='log-button'>Login/Signup</span>
+      <div class="name">
+        <form class='log-form' action='/users' method='post'>
+          <div><input type='text' name='user[name]' placeholder='Username'/></div>
+          <div><input type='password' name='user[password]' placeholder='Password'/></div>
+          <div><input type='submit' value='Login/Signup'></div>
+        </form>
+      </div>
+    </div>
+    <iframe src="https://www.twitch.tv/summit1g/embed" frameborder="0" scrolling="no" height="450" width="1100"></iframe>
   </div>
-  <form class='message' action='/messages' method='post'>
-    <input class="chat-box" type='text' name='message[content]' placeholder='Your Message Here!'></input>
-    <input type='submit' value='Submit'/>
-  </form>
+  <div class="chat-container">
+
+    <div class="chat">
+
+    </div>
+    <form class='message' action='/messages' method='post'>
+      <input class="chat-box" type='text' name='message[content]' placeholder='Your Message Here!'></input>
+      <input type='submit' value='Submit'/>
+    </form>
+  </div>
 </div>

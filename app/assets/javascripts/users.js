@@ -1,8 +1,24 @@
 $(document).ready(function(){
   $('.message').on('submit', postMessage);
   $('.log-form').on('submit', logIn);
+  $('.container').on('submit', '.logout', logOut);
 
 });
+
+var logOut = function(event){
+  event.preventDefault();
+  $target = $(event.target);
+
+  $.ajax({
+    url: $target.attr('action'),
+    method: 'delete',
+    dataType: 'json'
+  }).done(function(response){
+    location.reload();
+  }).fail(function(error){
+    console.log(error);
+  });
+};
 
 var logIn = function(event){
   event.preventDefault();
